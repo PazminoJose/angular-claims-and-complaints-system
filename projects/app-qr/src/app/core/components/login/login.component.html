@@ -1,0 +1,16 @@
+<form fxLayout="column" fxLayoutAlign="">
+  <h2>Credenciales</h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Correo</mat-label>
+    <input matInput placeholder="Ingrese su Correo" required>
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Contraseña</mat-label>
+    <input matInput placeholder="Ingrese su Contraseña" type="{{hidePassword===true?'password':'text'}}" required>
+    <button matSuffix mat-icon-button type="button">
+      <mat-icon (click)="onClickChangeIconLock()">{{hidePassword ===true ? 'lock':'lock_open'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-raised-button color="primary">Ingresar</button>
+</form>

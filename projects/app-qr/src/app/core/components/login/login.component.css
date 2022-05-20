@@ -1,0 +1,7 @@
+h2{
+    text-align: center;
+}
+:host{
+    width: 80%;
+    display: block;
+}

@@ -1,0 +1,13 @@
+.menu-icon{
+    width: 50px;
+    height: 35px;
+}
+mat-toolbar{
+    background-color: #039be5;
+    height: 80px;
+}
+h2{
+    font-size: 25px;
+    color: white;
+    line-height: 80px
+}

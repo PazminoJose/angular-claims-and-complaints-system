@@ -1,0 +1,14 @@
+<mat-toolbar fxLayout fxLayoutAlign="end center">
+  <button class="profile-btn" type="button" mat-button [matMenuTriggerFor]="menu">
+    <img src="/assets/img/avatar.png" alt="">
+    <span>Nombre Usuario</span>
+    <mat-icon >keyboard_arrow_down</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button [routerLink]="'/'" mat-menu-item>
+        <mat-icon >logout</mat-icon>
+        <span>Cerrar Sesión</span>
+    </button>
+  </mat-menu>
+
+</mat-toolbar>

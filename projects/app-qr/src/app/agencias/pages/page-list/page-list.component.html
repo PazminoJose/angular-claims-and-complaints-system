@@ -1,0 +1,17 @@
+<qr-tittle></qr-tittle>
+<qr-container>
+  <perfect-scrollbar class="heightMaxPerfectScrollbar">
+    <qr-table [data]="dataAgency" [metaDataColumns]="metaDataColumns">
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td class="align-right" mat-cell *matCellDef="let row">
+          <button mat-icon-button color="primary" (click)="openForm(row)" matTooltip="Editar"><mat-icon>edit</mat-icon></button>
+          <button mat-icon-button color="accent" (click)="delete(row.id)" matTooltip="Eliminar"><mat-icon>delete</mat-icon></button>
+        </td>
+      </ng-container>
+    </qr-table>
+   
+  </perfect-scrollbar>
+  <qr-paginator (onChangePage)="changePage($event)" [length]="totalRecords"></qr-paginator>
+</qr-container>
+<qr-keypad-button [keypadButtons]="keypadButtons" (onClick)="doAction($event)"></qr-keypad-button>

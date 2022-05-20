@@ -1,0 +1,32 @@
+mat-nav-list {
+    width: 95%;
+    height: calc(100vh - 74px);
+}
+
+mat-list-item {
+    margin-top: 10px;
+    border-radius: 0 24px 24px 0;
+}
+
+
+.menu-icon{
+    filter: invert(100%);
+    width: 50px;
+    height: 35px;
+}
+.menu-icon-big{
+    width: 50px;
+    height: 35px; 
+}
+span {
+    display: inline-block;
+    padding-left: 8px;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    color: white;
+    font-size: 14px;
+}

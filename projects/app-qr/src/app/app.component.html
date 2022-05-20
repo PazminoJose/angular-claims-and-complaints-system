@@ -1,0 +1,14 @@
+<!-- <router-outlet></router-outlet> -->
+<mat-sidenav-container autosize="true">
+  <mat-sidenav mode="side" opened="true">
+    <div  class="logo">
+      <h3 *ngIf="expanded">Sistema de quejas y Reclamos</h3>
+      <h3 *ngIf="!expanded">SQR</h3>
+    </div>
+    <qr-menu (onToggleExpandedEvent)="toggleExpanded($event)"></qr-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <qr-header></qr-header>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
