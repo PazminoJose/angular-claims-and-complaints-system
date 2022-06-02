@@ -21,6 +21,8 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { DownloadComponent } from './components/download/download.component';
 import { MatListModule } from '@angular/material/list';
 import {CustomPaginator} from './config/paginator.config';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 }
@@ -65,7 +67,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatSnackBarModule,
     KeypadButtonComponent,
     MatTooltipModule,
-    DownloadComponent
+    DownloadComponent,
+    MatToolbarModule,
+    MatFormFieldModule,
+    FlexLayoutModule,
+    MatInputModule
   ],
   providers: [
     { provide: PERFECT_SCROLLBAR_CONFIG, useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG },

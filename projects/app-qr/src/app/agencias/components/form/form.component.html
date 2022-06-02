@@ -1,0 +1,22 @@
+<mat-toolbar fxLayout fxLayoutAlign="space-between center">
+  <h3>{{title}}</h3>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-dialog-content>
+  <form fxLayout="column" [formGroup]="group">
+    <mat-form-field appearance="outline">
+      <mat-label>Agencia</mat-label>
+      <input type="text" matInput formControlName="name" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Dirección</mat-label>
+      <input type="text" matInput formControlName="address" required>
+    </mat-form-field>
+  </form>
+  <div fxLayout fxLayoutAlign="flex-end" fxLayoutGap="10px">
+    <button mat-raised-button color="primary" type="button" [disabled]="group.invalid" (click)="save()">Guardar</button>
+    <button mat-button color="primary" type="button" mat-dialog-close >Cancelar</button>
+  </div>
+</mat-dialog-content>

@@ -1,5 +1,6 @@
-import { Component, ContentChildren, Input, OnInit, QueryList, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, ContentChildren, Input, OnInit, Output, QueryList, SimpleChanges, ViewChild, EventEmitter } from '@angular/core';
 import { MatColumnDef, MatTable } from '@angular/material/table';
+import { TableUtil } from '../../Classes/TableUtil';
 import { MetaDataColumn } from '../../Interfaces/metacolumn.interface';
 interface IData {
   id: number;
@@ -16,16 +17,8 @@ export class TableComponent implements OnInit {
   columns: String[] = [];
   @ContentChildren(MatColumnDef, { descendants: true }) columnsDef!: QueryList<MatColumnDef>;
   @ViewChild(MatTable, { static: true }) table!: MatTable<any>;
-  // data: IData[]=[
-  //   {id: 1,agency: 'Ambato'},
-  //   {id: 2,agency: 'Quito'},
-  //   {id: 3,agency: 'Riobamba'},
-  //   {id: 4,agency: 'Guyaquil'},
-  //   {id: 5,agency: 'Cuenca'},
-  // ];
-  // listFields: string[] =[
-  //   'id', 'agency'
-  // ];
+  @Output() onExportTable: EventEmitter<string> = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -48,5 +41,6 @@ export class TableComponent implements OnInit {
 
     });
   }
+
 
 }
